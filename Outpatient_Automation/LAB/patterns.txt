@@ -1,0 +1,204 @@
+Consult patterns:
+===================
+
+o Consult gynecology Page
+
+
+=======================================================================================
+NEW_200
+=======================================================================================
+CSM
+---------
+Significant Diagnostic Studies & Procedures
+Radiological test
+Radiology
+Recent vital signs
+Labs Day of Discharge
+LAB DATA REVIEWED	Lab	Labs
+Imaging
+Hospital Course	Hospital Diagnoses	Hospital problem list
+Exam	ECG
+Discharge Diagnoses	Discharge Diagnosis	Discharge Exam	Discharge Vital Signs
+DISCHARGE SUMMARY
+Assessment	Assessment and Plan	Assessment/Plan		Admission diagnoses
+
+****************************************************************************************
+# For ICD_with_LAB combine group
+FACILITY_ASSESSMENT_MAP = {
+
+    "AHFL": {
+        "assessment_str": ['Discharge Diagnosis','Admission Diagnoses','Discharge Diagnoses','Admission Diagnosis','Hospital Diagnosis','Hospital Diagnoses',
+                           'Discharge Summary','Assessment & Plan','Assessment and Plan','Assessment/Plan','Assessment','Assessments','DIAGNOSES']
+            },
+
+    "CSM": {  # same as AHFL
+        "assessment_str": ['Discharge Diagnosis','Admission Diagnoses','Discharge Diagnoses','Admission Diagnosis','Hospital Diagnosis',
+                           'Hospital Diagnoses','Discharge Summary','Assessment & Plan','Assessment and Plan','Assessment/Plan','Assessment','Assessments','DIAGNOSES','Plan']
+            },
+
+    "CSCC": {
+        "assessment_str": ['Discharge Diagnosis','Impression','patient active problem list','A/P','Assessment','Problem List','Assessment and Plan','Assessment & Plan','Plan']
+            },
+
+    "NLO": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Admission Diagnoses','Admission Diagnosis','Hospital Diagnosis','Hospital Diagnoses',
+                           'Final Diagnosis','Final Diagnoses','Assessment & Plan','Assessment and Plan','Assessment/Plan','Assessments','Assessment',
+                           'DIAGNOSES','Impression','PLAN','ASSESSMENT','Plan']
+            },
+
+    "WA": {
+        "assessment_str": ['Discharge diagnosis','Discharge diagnoses','Admission Diagnoses','Admission Diagnosis','Admitting Diagnosis','Admitting Diagnoses',
+                           'Hospital Diagnosis','Hospital Diagnoses','Final Diagnoses','Hospital Course','Assesment and Plan','Assessment & plan',
+                           'Assessment and Plan','Assessment/Plan','Assessments/Problem List','Assessment','Assessments','Plan','plan']
+            },
+
+    "MCE": {  # same as WA
+        "assessment_str": ['Discharge diagnosis','Discharge diagnoses','Admission Diagnoses','Admission Diagnosis','Admitting Diagnosis','Admitting Diagnoses',
+                           'Hospital Diagnosis','Hospital Diagnoses','Final Diagnoses','Hospital Course','Assesment and Plan','Assessment & plan',
+                           'Assessment and Plan','Assessment/Plan','Assessments/Problem List','Assessment','Assessments','Plan','plan']
+            },
+
+    "BCS": {  # same as WA/MCE
+        "assessment_str": ['Discharge diagnosis','Discharge Diagnoses','Admission Diagnoses','Admission Diagnosis','Admitting Diagnosis','Admitting Diagnoses',
+                           'Hospital Diagnosis','Hospital Diagnoses','Final Diagnoses','Hospital Course','Assesment and Plan','Assessment & plan',
+                           'Assessment and Plan','Assessment/Plan','Assessments/Problem List','Assessment','Assessments','Plan','plan']
+            },
+
+    "BFS": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Problem List','Assessment','Assessment & Plan','Assessment and Plan','Assessment/Plan','Plan']
+            },
+
+    "MSMC": {
+        "assessment_str": ['HOSPITAL DIAGNOSIS','Diagnosis during this visit','Discharge Diagnoses','Discharge Diagnosis','ADMITTING PROBLEMS & DIAGNOSIS',
+                           'Hospital Course','Assessment','Assessment & Plan','Assessment and Plan','Assessment/Plan','IMPRESSION','Plan,'PLAN']
+            },
+
+    "OLGMC": {
+        "assessment_str": ['Discharge Diagnoses','Discharge Diagnosis','Hospital Course','Assessment','Assessment & Plan',
+                           'Assessment and Plan','Assessment/Plan','Plan','Assessment & plan']
+            },
+
+    "WH": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Assessments/Problem List','Assessment and Plan','Assessment','Assessment & Plan','Assessment/Plan','Plan']
+            },
+
+    "SFSPDC": {
+        "assessment_str": ['Visit Diagnoses','Discharge Diagnosis']
+            },
+
+    "LMC": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Hospital Diagnosis','Hospital Diagnoses','Hospital Problem',
+                           'Free Text A&P','Free Text DxA&P Notes','Free Text Dx A&P Notes','free text dxA&P','Problem list/A&P',
+                           'Assessment and Plan','Assessment & Plan','Assessment/Plan','Assessment','Hospital course to date','Hospital course','Plan']
+            },
+
+    "R": {  # same as LMC
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Hospital Diagnosis','Hospital Diagnoses','Hospital Problem',
+                           'Free Text A&P','Free Text DxA&P Notes','Free Text Dx A&P Notes','free text dxA&P','Problem list/A&P',
+                           'Assessment and Plan','Assessment & Plan','Assessment/Plan','Assessment','Hospital course to date','Hospital Course']
+            },
+
+    "CCCC": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Hospital Diagnosis','Hospital Diagnoses','Hospital Problem','Problems requiring intensive care',
+                           'Problem list','Assessment and Plan','Assessment & Plan','Assessment/Plan','Assessment','Hospital Course','Impression','Assessment_DOS']
+            },
+
+    "CSRNB": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Hospital Diagnosis','Hospital Problem','problem list','Global Assessment',
+                           'Assessment and Plan','Assessment & plan','Assessment & Plan','Assessment/Plan','Assessment','Hospital course',
+                           'Problems requiring intensive care','VTE Assessment']
+            },
+
+    "WCMICP": {
+        "assessment_str": ['Final Diagnosis','Admission Diagnosis','Discharge Diagnosis','Discharge Diagnoses','Hospital Diagnosis',
+                           'Hospital Diagnoses','Hospital Problem','Assessment/Plan of Treatment','Assessment & Plan of Treatment',
+                           'Assessment and Plan','Assessment & Plan','Assessment/Plan','Assessment','Hospital Course','Plan']
+            },
+
+    "CAICP": {
+        "assessment_str": ['Problem list','Active Problem List','Admission & final diagnosis','Admission & final diagnoses','Admission Diagnosis','Assessment_DOS','assessment_dos',
+                           'Assessment_DOS','Assessment','Assessment & plan','Assessment and plan','ASSESSMENT AND PLAN','Assessment & Plan','Assessment/Plan',
+                           'ASSESSMENTAND PLAN','ASSESSMENTANDPLAN','ASSESSMENT ANDPLAN','ASSESSMENT AND PLAN','Assessment','Plan','Discharge Diagnosis']
+            },
+
+    "H": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Assessment/Plan','ASSESSEMENT/PLAN','Assessment and plan','Assessment and Plan',
+                           'Assessment & plan','ASSESSEMENTPLAN','ASSESSEMENTIPLAN','ASESSMENTPLAN','Assessment / Plan','Assessment /Plan','ASSESSMENT PLAN',
+                           'Assessment','Hospital Course','Admission Diagnosis','Admission Diagnoses','Admitting diagnosis','Secondary diagnosis','Problem list']
+             },
+
+    "NL": {
+        "assessment_str": ['Final Diagnosis','Admitting diagnosis','Discharge Diagnosis','Assessment & plan','Assessment/Plan',
+                           'Assessment','Assessment and Plan','Hospital Course','Plan', 'PLAN']
+             },
+
+    "AMN": {
+        "assessment_str": ['Problem list','Discharge Diagnosis','Discharge Diagnoses','Assessment/Plan','Assessment/ Plan',
+                           'Assessment and Plan','Assessment','Chief Complaint/Reason for consultation']
+            },
+
+    "AW": {
+        "assessment_str": ['Problem list','Discharge Diagnosis','Dischargel Diagnosis','Discharge Diagnoses',
+                           'Assessment/Plan','Assessment/ Plan','Assessment / Plan','Assessment and Plan','Assessment']
+            },
+
+    "AR": {
+        "assessment_str": ['Discharge Diagnosis','Dischargel Diagnosis','Discharge Diagnoses','Admission Diagnoses','Problem list',
+                           'Assessment/Plan','Assessment/ Plan','Assessment / Plan','Assessment and Plan','Assessment','Chief Complaint/Reason for consultation']
+            },
+
+    "ARN": {
+        "assessment_str": ['Discharge Diagnosis','Dischargel Diagnosis','Discharge Diagnoses','Admission Diagnoses','Problem list','Assessment/Plan',
+                           'Assessment/ Plan','Assessment / Plan','Assessment and Plan','Assessment','Reason for consultation','Chief Complaint/Reason for consultation']
+            },
+
+    "JN": {
+        "assessment_str": ['Discharge Diagnosis','Discharge Diagnoses','Admitting diagnosis','Admitting diagnoses','Hospital Diagnoses','Hospital Diagnosis',
+                           'Discharge Plan','Discharge plan','Hospital Course','Assessment/Plan','Assessment and plan','A/P','Assessment and Plan','Problem list','Assessment']
+            }
+
+}
+****************************************************************************************
+
+
+LAB DATABASE AND UPDATES 
+------------------------------------------------------------------------------------------
+Diagnosis + Culture Status
+
+Abnormal:
+Positive Growth, Organism Identified, Final Positive Report, Preliminary Positive, Ordered
+	
+Normal:
+Pending, In Progress, No Growth, Negative
+------------------------------------------------------------------------------------------	 
+
+Common Organisms Identified in Culture Reports: 
+
+
+Bacteria:
+
+Escherichia coli (E. coli)
+Staphylococcus aureus (including MRSA)
+Streptococcus pneumoniae
+Streptococcus pyogenes
+Enterococcus faecalis
+Klebsiella pneumoniae
+Proteus mirabilis
+Pseudomonas aeruginosa
+Enterobacter cloacae
+Serratia marcescens
+Acinetobacter baumannii
+Haemophilus influenzae
+Neisseria gonorrhoeae
+Salmonella 
+Shigella 
+
+
+Fungi / Yeast:
+ 
+Candida albicans
+Candida glabrata
+Candida tropicalis
+Aspergillus fumigatus
+Cryptococcus neoformans
+------------------------------------------------------------------------------------------
