@@ -1,0 +1,145 @@
+import time
+import pandas as pd
+from tqdm import tqdm
+import swifter
+
+from NER_V1 import med_ner
+from NER_ANP_v2_2 import med_ner_anp        # updated on 04-11-2025
+from run_pipeline_v1 import chart_count_date
+
+
+# =====================================================================
+# Helper function (DRY: Don't Repeat Yourself)
+# =====================================================================
+def process_text_column(df, header_name, save_path, ner_function, save=False):
+    """
+    Generic function to apply NER function on a text column
+    and save the output CSV.
+    """
+
+    start = time.time()
+    print(f"\n=== Processing: {header_name} ===")
+
+    # Filter valid rows
+    non_empty = df[header_name].notna() & df[header_name].astype(str).str.strip().ne("")
+    texts = df.loc[non_empty, header_name]
+
+    print(f"Found {len(texts)} non-empty records")
+
+    # Apply NER with progress bar
+    tqdm.pandas(desc=f"Extracting meds → {header_name}")
+    extracted = texts.progress_apply(ner_function)
+
+    # Use swifter for parallel processing (it handles chunking automatically)
+    # tqdm.pandas(desc=f"Extracting meds → {header_name}")
+    # extracted = texts.swifter.progress_bar(True).apply(ner_function)
+
+    # New column name
+    new_col = f"Med_{header_name}"
+    df[new_col] = None
+    df.loc[non_empty, new_col] = extracted
+
+    # Save output
+    if save:
+        df.to_csv(save_path, index=False)
+
+    elapsed = time.time() - start
+    print(f"✔ Completed {header_name} in {elapsed:.2f} seconds\n")
+
+    return df
+
+def process_text_column_optimized(df, header_name, save_path, ner_function, save=False):
+    """
+    Optimized version of your original function
+    """
+    start = time.time()
+    print(f"\n=== Processing: {header_name} ===")
+
+    # More efficient filtering
+    non_empty = df[header_name].notna() & (df[header_name].astype(str).str.strip() != "")
+    valid_indices = non_empty[non_empty].index
+    texts = df.loc[valid_indices, header_name]
+
+    print(f"Found {len(texts)} non-empty records")
+
+    # Pre-allocate result array for better performance
+    results = [None] * len(df)
+    
+    # Process with progress bar
+    for idx, text in tqdm(zip(valid_indices, texts), total=len(texts), desc=f"Extracting {header_name}"):
+        results[idx] = ner_function(text)
+
+    # Assign all at once
+    df[f"Med_{header_name}"] = results
+
+    if save:
+        df.to_csv(save_path, index=False)
+
+    elapsed = time.time() - start
+    print(f"✔ Completed {header_name} in {elapsed:.2f} seconds\n")
+    return df
+# =====================================================================
+# Medication-specific processing
+# =====================================================================
+def medication_main(df, save_path):
+    start = time.time()
+    print("\n=== Processing MEDICATION file ===")
+
+    # Create combined field once
+    #df["MED_ORDER"] = df["MEDICATION"].astype(str) + " " + df["ORDER DETAIL"].astype(str)
+    df["MED_ORDER"] = df["MEDICATION"].astype(str)+" "+ df["DOSE"].astype(str)+" "+ df["ROUTE"].astype(str)#+" "+ df["ROUTE"].astype(str)
+
+    # Process NER
+    #df = process_text_column(df, "MED_ORDER", save_path, med_ner, save="False")
+    df = process_text_column_optimized(df, "MED_ORDER", save_path, med_ner, save="False")
+
+    
+
+    # Add PRN detection (vectorized)
+    if "PRN" not in df.columns:
+        df["PRN"] = df["MED_ORDER"].str.contains(r"\bPRN\b", case=False, na=False)
+
+    elapsed = time.time() - start
+    # Save output
+    df.to_csv(save_path, index=False)
+
+    elapsed = time.time() - start
+    print(f"✔ MEDICATION processing completed in {elapsed:.2f} seconds\n")
+
+    return df
+
+
+# =====================================================================
+# Main execution block
+# =====================================================================
+if __name__ == "__main__":
+    print("Started...")
+    start_time = time.time()
+
+    print(f"Started: {chart_count_date}")
+
+    # Load chart data
+    chart_path = f"./inter_op/Charts_Mongo_extracted_{chart_count_date}.xlsx"
+    chart_df = pd.read_excel(chart_path, engine="openpyxl")
+    print(f"Started ANP Medicine Extraction >> ")
+
+    # ---- Process Chart_Medication_Text ----
+    chart_header = "Chart_Medication_Text"
+    chart_save = f"./inter_op/Charts_Mongo_extracted_{chart_count_date}.csv"
+
+    chart_df = process_text_column_optimized(
+        chart_df,
+        chart_header,
+        chart_save,
+        med_ner_anp,
+        save=True
+    )
+
+    # ---- Load & process Medication data ----
+    med_path = f"./inter_op/Medication_Mongo_extracted_{chart_count_date}.xlsx"
+    med_df = pd.read_excel(med_path, engine="openpyxl")
+
+    med_save = f"./inter_op/Medication_Mongo_extracted_{chart_count_date}.csv"
+    medication_main(med_df, med_save)
+
+    print(f"\n=== ALL PROCESSING COMPLETED in {time.time() - start_time:.2f} seconds ===")
