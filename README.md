@@ -1,2 +1,2 @@
-# NDSINFO_Works
-All the codes related to NDSInfo
+# NDSinfo
+Automation work of Outpatient and Inpatient
