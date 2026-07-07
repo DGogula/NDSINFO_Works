@@ -1,0 +1,140 @@
+def discussion_management_csm(filename=None, dos=None, config=None):
+    if config is None:
+        return [{"Discussed Management": ["No Evidence Found"]}]
+    
+    consult_file = config.get("consult_file", "Consult_Order_CSM_NEW_ALL.xlsx")
+
+    try:
+        consult_df = pd.read_excel(consult_file)
+        consult_df.columns = consult_df.columns.str.strip()
+        # Normalize DOS to string (MM/DD/YYYY)
+        consult_df['DOS'] = pd.to_datetime(consult_df['DOS']).dt.strftime('%m/%d/%Y')
+        required_cols = ['Filename', 'DOS', 'Consult', 'Status']
+        missing_cols = [col for col in required_cols if col not in consult_df.columns]
+        if missing_cols:
+            return [{"Discussed Management": ["No Evidence Found"]}]
+    except Exception as e:
+        print(f"Error reading consult file: {e}")
+        return [{"Discussed Management": ["No Evidence Found"]}]
+
+    if filename is None or dos is None:
+        return [{"Discussed Management": ["No Evidence Found"]}]
+
+    target_dos_normalized = normalize_date(str(dos))
+    target_filename = str(filename).strip()
+
+    # Match rows by Filename and DOS
+    matched_rows = consult_df[consult_df['Filename'].astype(str).str.strip() == target_filename]
+    matched_consults = []
+    for _, row in matched_rows.iterrows():
+        row_dos_norm = normalize_date(str(row['DOS']))
+        if row_dos_norm == target_dos_normalized:
+            matched_consults.append(row)
+
+    # List of known medical specialties (used to clean captured text)
+    MEDICAL_SPECIALTIES = [
+        'CARE TRANSITIONS',
+        'CARDIOLOGY',
+        'CARDIOTHORACIC SURGERY',
+        'CASE MANAGEMENT',
+        'CHEST PAIN COORDINATOR',
+        'DIETITIAN',
+        'ELECTROPHYSIOLOGY',
+        'GASTROENTEROLOGY',
+        'GENERAL SURGERY',
+        'GI',
+        'HEMATOLOGY',
+        'HOSPITALIST',
+        'INFECTIOUS DISEASES',
+        'INTENSIVIST',
+        'NEPHROLOGY',
+        'NEUROLOGY',
+        'NEUROSURGERY',
+        'NUTRITIONAL SERVICES',
+        'OB/GYN',
+        'ONCOLOGY',
+        'ORTHOPEDIC',
+        'ORTHOPEDIC SURGERY',
+        'PALLIATIVE CARE',
+        'PODIATRY',
+        'PULMONOLOGY',
+        'RADIATION ONCOLOGY',
+        'SEPSIS COORDINATOR',
+        'SOCIAL WORK',
+        'SPIRITUAL CARE',
+        'STROKE COORDINATOR',
+        'UROLOGY',
+        'VASCULAR ACCESS TEAM',
+        'VASCULAR SURGERY',
+        'WOUND CARE'
+    ]
+    # Normalize to uppercase for easy comparison
+    MEDICAL_SPECIALTIES = [s.upper() for s in MEDICAL_SPECIALTIES]
+    # Sort by length descending to match longest phrases first (e.g., "CRITICAL CARE" before "CARE")
+    MEDICAL_SPECIALTIES.sort(key=len, reverse=True)
+
+    specialties = []
+    for row in matched_consults:
+        # Treat blank/NaN Status as "active"
+        status_raw = row.get('Status', '')
+        if pd.isna(status_raw) or str(status_raw).strip() == '':
+            status = 'active'
+        else:
+            status = str(status_raw).strip().lower()
+
+        if status not in ['active', 'completed', 'compeletd']:
+            continue
+
+        consult_text = str(row.get('Consult', ''))
+        # Remove leading date (e.g., "10/02/2024 ")
+        consult_text = re.sub(r'^\d{1,2}/\d{1,2}/\d{4}\s+', '', consult_text)
+        # Fix common typo "consultt"
+        consult_text = re.sub(r'\bconsultt\b', 'consult', consult_text, flags=re.IGNORECASE)
+
+        consult_text_upper = consult_text.upper()
+        if any(re.search(p, consult_text_upper) for p in EXCLUDED_SPECIALTY_PATTERNS1):
+            continue
+
+        # Capture from "consult to" up to the first comma, status word, or end of string
+        match = re.search(
+            r'consult\s+to[\' ]?\s*(.*?)(?:,|\s+(?:Completed|Active|Completd|Discontinued)\b|$)',
+            consult_text,
+            re.IGNORECASE
+        )
+        if not match:
+            continue
+
+        captured = match.group(1).strip()
+        # Remove common prefix words (Inpatient, ED, Pharmacy, Tele)
+        captured = re.sub(r'^(?:Inpatient|ED|Pharmacy|Tele)\s+', '', captured, flags=re.IGNORECASE)
+
+        # Find the best matching specialty from the list
+        best_match = None
+        captured_upper = captured.upper()
+        for spec in MEDICAL_SPECIALTIES:
+            # Check if the captured text starts with the specialty (whole word boundary)
+            pattern = r'^' + re.escape(spec) + r'\b'
+            if re.search(pattern, captured_upper):
+                best_match = spec
+                break
+
+        if best_match:
+            specialties.append(best_match)
+        else:
+            # Fallback: use the cleaned captured text as is (but remove provider name stopword)
+            # e.g., if no specialty matched, try to take the first word if there are multiple
+            words = captured.split()
+            if len(words) > 1 and words[1][0].isupper():   # heuristic: second word looks like a name
+                possible_spec = words[0].upper()
+                if possible_spec in MEDICAL_SPECIALTIES:
+                    specialties.append(possible_spec)
+                else:
+                    specialties.append(possible_spec)   # anyway
+            else:
+                specialty = re.sub(r'\s+', ' ', captured).upper()
+                if specialty.strip():
+                    specialties.append(specialty)
+
+    # Deduplicate and sort
+    specialties = sorted(list(set(specialties)))
+    return [{"Discussed Management": specialties if specialties else ["No Evidence Found"]}]

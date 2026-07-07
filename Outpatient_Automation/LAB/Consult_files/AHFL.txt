@@ -1,0 +1,73 @@
+def discussion_management_ahfl(filename=None, dos=None, config=None):
+    if config is None:
+        return [{"Discussed Management": ["No Evidence Found"]}]
+    
+    consult_file = config.get("consult_file", "Consult_Order_AHFL_NEW_ALL.xlsx")
+    
+    
+    try:
+        consult_df = pd.read_excel(consult_file)
+        consult_df['DOS'] = pd.to_datetime(consult_df['DOS']).dt.strftime('%m/%d/%Y')
+        consult_df.columns = consult_df.columns.str.strip()
+        # Convert DOS column to string and normalize (handle datetime)
+        consult_df['DOS'] = consult_df['DOS'].astype(str).str.strip()
+        required_cols = ['Filename', 'DOS', 'Consult', 'Status']
+        missing_cols = [col for col in required_cols if col not in consult_df.columns]
+        if missing_cols:
+            print(f"Missing columns: {missing_cols}")
+            return [{"Discussed Management": ["No Evidence Found"]}]
+    except Exception as e:
+        print(f"Error reading consult file: {e}")
+        return [{"Discussed Management": ["No Evidence Found"]}]
+    
+    if filename is None or dos is None:
+        return [{"Discussed Management": ["No Evidence Found"]}]
+    
+    target_dos_normalized = normalize_date(str(dos))
+    target_filename = str(filename).strip()
+    
+    # Debug: print what we are looking for
+    # print(f"[DEBUG] Looking for Filename='{target_filename}', DOS='{target_dos_normalized}'")
+    
+    matched_rows = consult_df[consult_df['Filename'].astype(str).str.strip() == target_filename]
+    # print(f"[DEBUG] Matched by filename: {len(matched_rows)} rows")
+    
+    matched_consults = []
+    for _, row in matched_rows.iterrows():
+        row_dos_norm = normalize_date(str(row['DOS']))
+        if row_dos_norm == target_dos_normalized:
+            matched_consults.append(row)
+            # print(f"[DEBUG] Matched DOS: {row['DOS']} -> {row_dos_norm}")
+    
+    # print(f"[DEBUG] Total matched consults: {len(matched_consults)}")
+    
+    specialties = []
+    for row in matched_consults:
+        status = str(row.get('Status', '')).strip().lower()
+        if status not in ['completed', 'compeletd', 'completd', 'active']:
+            continue
+        consult_text = str(row.get('Consult', ''))
+        # Optional: remove leading date if present (better regex will handle anyway)
+        consult_text = re.sub(r'^\d{1,2}/\d{1,2}/\d{4}\s+', '', consult_text)
+        consult_text_upper = consult_text.upper()
+        if any(re.search(p, consult_text_upper) for p in EXCLUDED_SPECIALTY_PATTERNS1):
+            continue
+        # More flexible pattern: match "consult to" then capture up to status or end
+        specialty_match = re.search(
+            r'consult\s+to\s+(.*?)(?=\s+(?:Completed|Active|Completd|Discontinued)\b|$)',
+            consult_text,
+            re.IGNORECASE
+        )
+        if specialty_match:
+            specialty = specialty_match.group(1).strip()
+            specialty = re.sub(r'\s+', ' ', specialty).upper()
+            # Remove extra words like "Inpatient" that might be captured
+            specialty = re.sub(r'^INPATIENT\s+', '', specialty)
+            if specialty:
+                specialties.append(specialty)
+                # print(f"[DEBUG] Extracted specialty: {specialty}")
+    
+    specialties = sorted(list(set(specialties)))
+    if specialties:
+        return [{"Discussed Management": specialties}]
+    return [{"Discussed Management": ["No Evidence Found"]}]
