@@ -1,0 +1,43 @@
+﻿DATE/TIME NOTE CREATED:
+04/25/2024
+PROCEDURE(S) PERFORMED:
+Ultrasound-guided right common femoral vein access with 14 French sheath
+insertion
+Ultrasound-guided left common femoral vein access with 9 French sheath
+insertion
+Transesophageal echocardiogram interpretation
+Intracardiac echocardiogram insertion and interpretation
+Transseptal catheterization with left atrial pressure measurement
+Left atrial appendage angiography
+Insertion left atrial appendage occluder with Amplatzer amulet 28 mm lot
+#9025459
+Vascade hemostasis left and right common femoral venous access sites
+Vascade hemostasis right CFV access site
+PROCEDURE/SURGERY START:
+Start: 1008 am
+End time: 1050 am
+DAP: 211
+Fluoroscopy time: 17.1 minutes
+Contrast: 100cc
+PRIMARY SURGEON(S):
+Structural interventional cardiologist: Akram W. Ibrahim, MD
+ANESTKESIOLOGIST/CRNA:
+Dr. Shah
+ANESTHESIA TYPE:
+General
+PREOPERATIVE ANTIBIOTIC:
+Ancef
+PRE-OPERATIVE DIAGNOSIS:
+Patient is 35 years old with history of paroxysmal atrial fibrillation,
+elevated bleeding risk and a poor candidate for long-term anticoagulation.
+She was recommended for left atrial appendage occlusion with Amplatzer amulet
+device.
+POST-OPERATIVE DIAGNOSIS:
+Same
+INDICATIONS FOR PROCEDURE:
+Same
+DESCRIPTION OF PROCEDURE(S):
+After informed consent was obtained the patient was brought to the
+catheterization lab in a stable, fasting state. A timeout was performed and
+she was given general anesthesia and monitored by CRNA through the procedure.
+TEE probe was then passed and used to evaluate the left atrial appendage. The

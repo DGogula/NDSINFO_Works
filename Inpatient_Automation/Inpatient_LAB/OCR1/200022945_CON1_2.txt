@@ -1,0 +1,35 @@
+﻿90 bpm
+(04/26 06:30)
+64 bpm
+(04/25 15:15)
+93 bpm
+(04/25 12:15)
+MU Cardiac Rhythm
+Atrial fib
+(04/25 18:19)
+Pulse/HR Method
+Monitor
+(04/26 06:30)
+Respiratory Rate
+16	breaths/min
+(04/26 02:02)
+11 breaths/min (L)
+(04/25 12:30)
+17	breaths/min
+(04/25 11:15)
+Systolic Blood Pressure
+127 mmHg
+(04/26 06:30)
+100 xranHg
+(04/25 11:01)
+158 mmHg (H)
+(04/25 11:45)
+Diastolic Blood Pressure
+87 mmHg
+(04/26 06:30)
+75 ramHg
+(04/25 11:01)
+109 mmKg (H)
+(04/25 11:30)
+MAP
+100 mmKg

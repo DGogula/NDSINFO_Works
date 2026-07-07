@@ -1,0 +1,40 @@
+﻿RDW
+17.2	(H)
+04/25 07:08
+Platelet Count
+157
+04/25 07:08
+MPV
+9.2
+04/25 07:08
+Neutrophil Rel
+74.3
+04/25 07:08
+Lymphocyte Rel
+11.6
+04/25 07:08
+Monocyte Rel
+8.3
+04/25 07:08
+Eosinophil Rel
+4.9
+04/25 07:08
+Basophil Rel
+0.9
+04/25 07:08
+Neutrophil Abs
+4.4
+04/25 07:08
+Lymphocyte Abs
+0.7 (L)
+04/25 07:08
+Monocyte Abs
+0.5
+04/25 07:08
+Eosinophil Abs
+0.3
+04/25 07:08
+Basophil Abs
+0.1
+04/25 07:08
+Chemistry Comprehensive - Last 36 hours (19)

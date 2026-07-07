@@ -1,0 +1,43 @@
+﻿DATE/TIME NOTE CREATED:
+04/26/2024 08:11:23
+DATE/TIME PATIENT SEEN:
+04/26/2024 08:20:00
+CHIEF COMPLAINT:
+ATRIAL FIBRILLATION
+REASON FOR CONSULTATION:
+s/p Amulet
+HISTORY OF PRESENT ILLNESS:
+74-year-old male with past medical history significant for ischemic CMO,
+EF 15%. Patient was evaluated by electrophysiologist and recommended ICD over
+ablation, however, patient declined ICD at this time and accepted risks.
+Severe 3V CAD, 2 CTO of RCA and LAD w/ prior stent - not surgical candidate
+s/p Impella assisted stenting of LAD and diagonal, chronic a. fib on AC, HTN,
+HLP, CKD presented to the hospital for an amulet placement secondary to high
+risk of bleeding, patient tolerated procedure very well.
+Now lying down in bed comfortably denies any chest pain short of breath
+orthopnea paroxysmal dyspnea, no abdominal pain nausea vomiting diarrhea fever
+chills. Post-op ECHO w/ stable small pericardial effusion, pt is stable for
+discharge from CV standpoint. EF 20-25%
+REVIEW OF SYSTEMS:
+12 point review system negative except for HPI.
+PHYSICAL EXAM:
+VITAL SIGNS:
+Vital Signs:
+Last Charted:
+24 Hr Minimum:
+24 Hr Maximum:
+Temperature Oral
+36.7 degC
+(04/26 06:30)
+36.7 degC
+(04/26 06:30)
+37 degC
+(04/25 18:21)
+Temperature Temporal
+36.1 degC (L)
+(04/25 11:01)
+36.1 degC (L)
+(04/25 11:01)
+36.1 degC (L)
+(04/25 11:01)
+Heart Rate

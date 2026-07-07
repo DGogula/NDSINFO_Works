@@ -1,0 +1,43 @@
+﻿DATE/TIME NOTE CREATED:
+04/25/2024 13:04:59
+DATE/TIME PATIENT SEEN:
+4/25/2024
+ATTENDING PHYSICIAN:
+Essam Ali, MD
+CHIEF COMPLAINT:
+ATRIAL FIBRILLATI0N
+HISTORY OF PRESENT ILLNESS:
+74-year-old male with past medical history significant for ischemic CMO,
+EF 15%, chronic a. fib on AC, HTN, HLP, CKD presented to the hospital for an
+amulet placement secondary to high risk of bleeding, patient tolerated
+procedure very well
+history Obtained from the patient reviewing the chart
+2/23/2023 s/p LHC for LAD artery CTO and stenting of raid LAD and diagnoal.
+He was turned down for CABG prior.
+Now lying down in bed comfortably denies any chest pain short of breath
+orthopnea paroxysmal dyspnea, no abdominal pain nausea vomiting diarrhea fever
+chills
+REVIEW OF SYSTEMS:
+10 point review of system is negative except mentioned in subjective
+PHYSICAL EXAM:
+VITAL SIGNS:
+Vital Signs:
+Last Charted:
+24 Hr Minimum.:
+24 Hr Maximum:
+Temperature Temporal
+36.1 degC (L)
+(04/25 11:01)
+36.1 degC (L)
+(04/25 11:01)
+36.9 degC
+(04/25 06:30)
+Heart Rate
+88 bpm
+(04/25 12:30)
+72 bpm
+(04/25 11:01)
+93 bpm
+(04/25 12:15)
+MU Cardiac Rhythm
+Atrial fib

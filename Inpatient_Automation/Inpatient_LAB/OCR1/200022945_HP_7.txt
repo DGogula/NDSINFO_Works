@@ -1,0 +1,43 @@
+﻿04/25 07:08
+MCV
+91.6
+04/25 07:08
+MCH
+29.9
+04/25 07:08
+MCHC
+32.7
+04/25 07:08
+RDW
+17.2	(H)
+04/25 07:08
+Platelet Count
+157
+04/25 07:08
+MPV
+9.2
+04/25 07:08
+Neutrophil Rel
+74.3
+04/25 07:08
+Lymphocyte Rel
+11.6
+04/25 07:08
+Monocyte Rel
+8.3
+04/25 07:08
+Eosinophil Rel
+4.9
+04/25 07:08
+Basophil Rel
+0.9
+04/25 07:08
+Neutrophil Abs
+4.4
+04/25 07:08
+Lymphocyte Abs
+0.7 (L)
+04/25 07:08
+Monocyte Abs
+0.5
+04/25 07:08

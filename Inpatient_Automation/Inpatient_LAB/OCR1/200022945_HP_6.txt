@@ -1,0 +1,38 @@
+﻿Medications {14) Active
+Scheduled: (7)
+aspirin 325 mg = 1 tab. Oral, Daily
+clopidogrel 600 mg = 2 tab. Oral, Once Scheduled
+clopidogrel (Plavix) 75 mg = 1 tab. Oral, Daily
+diazePAM (Valium) 5 mg = 1 tab. Oral, On Call
+ethanol topical (Alcohol-Based Nasal Antiseptic Swab) 1 application. Each
+Nostril, Pre Op
+ethanol topical (Alcohol-Based Nasal Antiseptic Swab) 1 application. Each
+Nostril, BID
+sodium chloride (sodium chloride 0.9% flush) 3 ml, IV Push, Q8hr
+Continuous: (2)
+Sodium Chloride 0.9% 1,000 mL 1,000 mL, IV, 100 mL/hr
+Normal Saline 0.9% 500 mL 500 mL, IV, 250 mL/hr
+PRN: (5)
+dexamethasone 8 mg = 2 mL, IV Push, One Time Unscheduled
+diphenhydrAMINE (Benadryl) 50 mg = 1 mL, IV Push, One Time Unscheduled
+famotidine (Pepcid) 20 mg = 2 mL, IV Push, One Time Unscheduled
+nitroGLYCerin (Nitrostat) 0-4 mg = 1 tab. Sublingual, Q5 Min-int
+ondansetron {Zofran) 4 mg = 2 mL, IV Push, Q6hr
+ALLERGIES:
+Allergies (1) Active	Reaction
+No Known Medication Allergies	None Documented
+LAB RESULTS:
+Hematology Basic - Last 36 hours (20)
+Result
+Date/Time
+WBC
+6.0
+04/25 07:08
+RBC
+4.12 (L)
+04/25 07:08
+Hgb
+12.3 (L)
+04/25 07:08
+Hct
+37.7 (L)

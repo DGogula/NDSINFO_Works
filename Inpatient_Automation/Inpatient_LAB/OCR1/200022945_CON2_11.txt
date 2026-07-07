@@ -1,0 +1,38 @@
+﻿04/25 07:08
+AST
+23
+04/25 07:08
+ALT
+26
+04/25 07:08
+Globulin
+2.2
+04/25 07:08
+Osmolality Calc
+302
+04/25 07:08
+A/G Ratio
+1.9
+04/25 07:08
+DIAGNOSTIC RESULTS:
+Radiology - Last 3 6 hours (0)
+No results in past 36 hours
+Diagnostics - Non-Radiology (1)
+Cardiac Cath Report EMR No Cosign (04/25 11:00)
+cardiogram insertion and interpretation
+Transseptal catheterization with left atrial pressure measurement
+Left atrial appendage angiography
+Insertion left atrial appendage occluder with Amplatzer amulet 28 mm lot
+#9025459
+Vascade hemostasis left and right common femoral venous access sites
+Vascade hemostasis right CFV access site
+PROCEDURE/SURGERY START:
+Start: 1008 am
+End time: 1050 am
+DAP: 211
+Fluoroscopy time: 17.1 minutes
+Contrast: 100cc
+PRIMARY SURGEON(S):
+Structural interventional cardiologist: Aicram W. Ibrahim, MD
+ANESTHESIOLOGIST/CRNA:
+Dr. Shah

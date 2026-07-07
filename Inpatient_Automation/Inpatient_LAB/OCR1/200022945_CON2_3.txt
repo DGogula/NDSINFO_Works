@@ -1,0 +1,31 @@
+﻿(04/26 06:30)
+83 mmHg
+(04/25 11:01)
+121 mmHg
+(04/25 11:30)
+Blood Pressure Location
+Right, Upp
+(04/26 02:02)
+Blood Pressure Method
+Automatic
+(04/26 06:30)
+Probe Site
+Right, Fin
+(04/25 15:15)
+Sp02/Pulse Oximetry
+96 %
+(04/26 06:30)
+77 % (L)
+(04/25 12:30)
+100 %
+(04/25 11:30)
+Oxygen Flow
+8 L/min
+(04/25 11:30)
+8 L/min
+(04/25 11:01)
+15 L/min
+(04/25 11:15)
+BMI
+29 kg/m2
+(04/26 04:07)

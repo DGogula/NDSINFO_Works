@@ -1,0 +1,43 @@
+﻿DATE/TIME NOTE CREATED:
+04/26/2024 10:12:34
+DATE/TIME PATIENT SEEN:
+4/26/2024
+HOSPITAL COURSE:
+74-year-old male with past medical history significant for ischemic CMO, EF
+15%, chronic a. fib on AC, HTN, HLP, CKD presented to the hospital for an
+amulet placement secondary to high risk of bleeding, patient tolerated
+procedure very well
+history Obtained from the patient reviewing the chart
+2/23/2023 s/p LHC for LAD artery CTO and stenting of mid LAD and diagnoal.
+He was turned down for CABG prior.
+Now lying down in bed comfortably denies any chest pain short of breath
+orthopnea paroxysmal dyspnea, no abdominal pain nausea vomiting diarrhea fever
+chills
+No complaint, goal ana plan of care discussed with the patient and family at
+the bedside in full details expressed verbal standing ana agreed to plan of
+care
+PHYSICAL EXAM:
+VITAL SIGNS:
+Vital Signs:
+Last Charted:
+24 Hr Minimum:
+24 Hr Maximum:
+Temperature Oral
+36.7 degC
+(04/26 06:30)
+36.7 degC
+(04/26 06:30)
+37 degC
+(04/25 18:21)
+Temperature Temporal
+36.1 degC (L)
+(04/25 11:01)
+36.1 degC (L)
+(04/25 11:01)
+36.1 degC (L)
+(04/25 11:01)
+Heart Rate
+90 bpm
+(04/26 06:30)
+64 bpm
+(04/25 15:15)

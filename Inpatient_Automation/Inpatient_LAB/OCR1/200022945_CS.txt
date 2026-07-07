@@ -1,0 +1,33 @@
+﻿ADMIT DX:	I48.0 Paroxysmal atrial fibrillation
+DRG:	0273 PERCUTANEOUS AND OTHER INTRACARDIAC	SOI:	ROM:
+SEQ. DIAGNOSIS
+1	I48.0 Paroxysmal atrial fibrillation
+POA: Y CC/MCC: 1 That impacts DRG
+2	Z00.6 Encntr for exam for nrml cmprsn and Ctrl in clncl rsrch prog
+POA: E	CC/MCC: 0 No Impact
+3	J96.91 Respiratory failure, unspecified with hypoxia
+POA: N CC/MCC: 5 MCC That impacts DRG
+4	I50.20 Unspecified systolic (congestive) heart failure
+POA: Y CC/MCC: 2 CC Does not impact DRG
+5	I13.0 Hyp hrt & chr kdny dis w hrt fail and stg 1-4/unsp chr kdny
+POA: Y CC/MCC: 2 CC Does not impact DRG
+6	N18.2	Chronic kidney disease, stage 2 (mild)
+POA: Y	CC/MCC: 0 No Impact
+7	I25.5 Ischemic cardiomyopathy
+POA: Y	CC/MCC: 0 No Impact
+8	E87.6 Hypokalemia
+POA: Y	CC/MCC: 0 No Impact
+S N40.0	Benign prostatic hyperplasia without lower urinry tract symp
+POA: Y	CC/MCC: 0 No Impact
+10	I25.10 Athscl heart disease of native coronary artery w/o ang pctrs
+POA: Y	CC/MCC: 0 No Impact
+11	E78.2 Mixed hyperlipidemia
+POA: Y	CC/MCC: 0 No Impact
+12	Z87.891 Personal history of nicotine dependence
+POA: E	CC/MCC: 0 No Impact
+SEQ/EPI/PROCEDURE/BILIABLE PROVIDER/PROC DATE
+1	01 02L73DK Occlusion of LAA with Intralum Dev, Perc Approach
+04119 (IBRAHIM AKRAM W)	4/25/24
+2	02 B24BZZ4 Ultrasonography of Heart with Aorta, Transesophageal
+04119 (IBRAHIM AKRAM W)	4/25/24
+** END OF REPORT **

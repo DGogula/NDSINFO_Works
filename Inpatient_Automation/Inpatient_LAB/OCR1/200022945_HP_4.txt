@@ -1,0 +1,42 @@
+﻿cannula to maintain 02 sat greater than 92%
+#	Hyperlipidemia continue on statin
+#	Chronic electrolyte supplement including hypokalemia continue on
+supplement replacement per protocol
+#	Chronic kidney disease stage II most likely secondary to cardiorenal
+-Avoid nephrotoxic medication no NSAIDs and renally dose medication
+ATTESTATION:
+Patient seen and evaluated at bedside, consent for advance care planning
+discussion.
+Parties present other than myself: patient,
+we discussed the patient code status including but not limited to the
+following; CPR to maintain cardiac output, vasoactive medication to maintain
+mean arterial blood pressure and normal heart rate, parenteral/internal
+feeding to maintain nutrition, noninvasive ventilation including BiPAP,
+hemodialysis for renal support and invasive ventilation with intubation/life
+support.
+Patient at this time verbalizes understanding, and wants to status as FULL
+code.
+Total time spent in ACP discussion is more than 17 minutes.
+PROBLEM LIST/PAST MEDICAL HISTORY:
+Ongoing
+Acute on chronic systolic heart failure (Patient Stated)
+Atrial fibrillation (Patient Stated)
+BPH (benign prostatic hyperplasia) (Patient Stated)
+CAD (coronary artery disease) (Patient Stated)
+Cancer (Patient Stated)
+Cardiomyopathy (Patient Stated)
+CHF (congestive heart failure) (Patient Stated)
+CKD (chronic kidney disease) (Patient Stated)
+CVA (cerebral vascular accident) (Patient Stated)
+DOE (dyspnea on exertion) (Patient Stated)
+Hypertension (Patient Stated)
+Mixed hyperlipidemia (Patient Stated)
+PVC (premature ventricular contraction) (Patient Stated)
+Historical
+No qualifying data
+PROCEDURE/SURGICAL HISTORY:
+Heart Cardioversion (01/15/2024)
+Off Service Recovery (01/15/2024)
+Special Procedure (01/15/2024)
+Appendectomy
+coronary stent placement

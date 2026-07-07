@@ -1,0 +1,43 @@
+﻿GENERAL: Alert oriented x3, no acute distress
+Skin : warm and dry in appearance, textures And no rash
+HEENT: Normocephalic, no scalp lesion, sclera and conjunctiva clear, moist
+oral mucous membrane, no oral lesion normocephalic
+NECK: [Supple, no tenderness, no lymphadenopathy, no masses, no
+thyromegaly, no bruits, no JVD.]_
+LUNGS: Normal inspection, equal rise and fall, nonlabored respiratory
+effort, breath sounds are equal bilateral, clear to auscultation, no wheezing,
+rhonchi or rales
+HEART: Regular rate and rhythm, normal S1/S2, no rub murmur or gallop, PMI
+is not displaced
+VASC: [No edema. Peripheral pulses normal and equal in all extremities.]_
+ABD: [Soft, nontender to palpation, bowel sounds normal, no masses, no
+organomegaly or ascites.]_
+GU: [Normal.]_
+LYMPH: [No lymphadenopathy noted.]_
+EXT: [Normal range of motion, no joint swelling, no clubbing, no
+cyanosis.]_
+TUBES/LINES/DRAINS: [None.)_
+NEURO: Normal affect. Cranial nerves intact. No focal sensory or
+strength deficits. Reflexes symmetric.]_
+DISCHARGE DIAGNOSES AND PLAN:
+#	Paroxysmal atrial fibrillation with RVR is status post amulet placement
+-Continue on home dose amiodarone, aspirin and Plavix and high-dose of statin
+#post procedure Acute expected pain , now good control
+#	Chronic ischemic cardiomyopathy severe systolic congestive heart failure
+with reduced ejection fraction, no acute exacerbation
+-Continue on guideline directed medical therapy and Lasix 40 mg p.o. daily
+-cont Entresto
+#post procedure Transient hypoxic respiratory failure, wean off nasal
+cannula to maintain 02 sat greater than 92% . now resolved
+#	Hyperlipidemia continue on statin
+#	Chronic electrolyte supplement including hypokalemia continue on supplement
+replacement per protocol
+#	Chronic kidney disease stage II most likely secondary to cardiorenal
+PATIENT DISCHARGE CONDITION:
+stable
+DISCHARGE DISPOSITION:
+home
+DATE OF DISCHARGE:
+4/26/2024
+DISCHARGE MEDICATIONS:
+Discharge Medications (9)

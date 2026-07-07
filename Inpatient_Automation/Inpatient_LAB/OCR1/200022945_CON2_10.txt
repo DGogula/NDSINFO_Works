@@ -1,0 +1,43 @@
+﻿Result
+Date/Time
+Sodium Lvl
+143
+04/25 07:08
+Potassium Lvl
+4.0
+04/25 07:08
+Chloride Lvl
+107
+04/25 07:08
+C02
+29
+04/25 07:08
+Glucose Level
+103
+04/25 07:08
+BUN
+28 (H)
+04/25 07:08
+Creatinine Lvl
+1.30
+04/25 07:08
+AGAP
+7.0
+04/25 07:08
+BUN/Creat
+22
+04/25 07:08
+Total Protein
+6.3
+04/25 07:08
+Albumin Lvl
+4.1
+04/25 07:08
+Calcium Lvl
+9.1
+04/25 07:08
+Bili Total
+0.5
+04/25 07:08
+Alk Phos
+66

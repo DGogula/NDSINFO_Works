@@ -1,0 +1,42 @@
+﻿CKD (chronic kidney disease) (Patient Stated)
+CVA (cerebral vascular accident) (Patient Stated)
+DOE (dyspnea on exertion) (Patient Stated)
+Hypertension (Patient Stated)
+Mixed hyperlipidemia (Patient Stated)
+PVC (premature ventricular contraction) (Patient Stated)
+Historical
+No qualifying data
+PROCEDURE/SURGICAL HISTORY:
+Heart Cardioversion (01/15/2024)
+Off Service Recovery (01/15/2024)
+Special Procedure (01/15/2024)
+Appendectomy
+coronary stent placement
+Facial/jaw Surgery
+knee surgery
+left Heart Catheterization
+SOCIAL HISTORY:
+Alcohol
+Denies use, 02/17/2023
+Denies use, 01/19/2023
+Electronic Cigarette/Vaping
+Never E-Cigarette Use:., 01/23/2023
+Home/Environment
+Human Trafficking Red Flags None., 04/25/2024
+Substance Abuse
+Denies use Use:., 04/25/2024
+Tobacco
+Former smoker. Cigarettes, 6 year(s). Stopped age 40 Years., 04/25/2024
+FAMILY HISTORY:
+DM - Diabetes mellitus: Father.
+HTN - Hypertension: Mother.
+Heart attack: Father.
+Malignant hyperthermia: Negative: Mother, Father, Sister, Brother and
+Grandparent.
+Stroke: Mother.
+MEDICATIONS:
+Medications {16) Active
+Scheduled: (10)
+amiodarone 200 mg = 1 tab. Oral, Daily
+aspirin 325 mg = 1 tab., Oral, Daily
+aspirin 81 mg = 1 tab, Oral, Daily
